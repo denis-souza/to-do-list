@@ -1,4 +1,5 @@
-# to-do-list
+# To Do List
+A simple to do list to create, edit and delete tasks via interface
 
 ### Setup
 * Create database with name: ``to_do_list``.
