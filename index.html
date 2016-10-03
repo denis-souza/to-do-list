@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet">
+
+    <title>Task List</title>
+  </head>
+
+  <body>
+    <div class="navbar navbar-default" id="navbar">
+      <div class="container" id="navbar-container">
+        <div class="navbar-header">
+          <a href="#" class="navbar-brand">
+            <small>
+              <i class="fa fa-list" aria-hidden="true"></i>
+              Task List
+            </small>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="container">
+        <button class="btn btn-primary btn-lg add-task" data-toggle="modal" data-target="#modalForm">
+          <i class="fa fa-plus-circle" aria-hidden="true"></i> Create Task
+        </button>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="msg"></div>
+            <table class="table table-hover">
+              <thead>
+                <th>Content</th>
+                <th>Type</th>
+                <th>Date</th>
+                <th>Actions</th>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="modalForm" tabindex="-1" role="dialog" aria-labelledby="#modalFormLable" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                  <span aria-hidden="true">&times;</span>
+                  <span class="sr-only">Close</span>
+                </button>
+
+                <h4 class="modal-title" id="modalFormLable">
+                  New Task
+                </h4>
+              </div>
+
+              <!-- Modal Body -->
+              <div class="modal-body">
+
+                <form role="form" id="save-task">
+                  <div class="form-group">
+                    <label for="content">Content</label>
+                      <textarea class="form-control" rows="5" id="content" placeholder="Informe a descrição da tarefa"></textarea>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="priority">Type</label>
+                      <select class="form-control" id="type">
+                        <option value="shopping">shopping</option>
+                        <option value="work">work</option>
+                        <option value="bar">bar</option>
+                        <option value="foo">foo</option>
+                      <select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="content">Order</label>
+                      <input class="form-control" id="sort_order" placeholder="Informe a ordem">
+                  </div>
+
+                  <div class="form-group">
+                    <div class="checkbox">
+                      <label><input type="checkbox" id="has-done" value="">Done?</label>
+                    </div>
+
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                  <button type="submit" class="btn btn-success button-submit" data-uuid="" data-action="insetTask">Save New Task</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+    <script type="text/javascript" charset="utf-8">
+
+    </script>
+
+  </body>
+</html>
